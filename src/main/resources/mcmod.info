@@ -1,0 +1,16 @@
+[
+{
+  "modid": "lateore",
+  "name": "Late Ore",
+  "description": "Adds ores from newly installed mods to existing chunks",
+  "version": "0.0.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["aucguy"],
+  "credits": "Aucguy. He did everything",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
