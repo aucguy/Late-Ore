@@ -1,5 +1,6 @@
 package com.aucguy.lateore.generate;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -12,8 +13,6 @@ import net.minecraftforge.event.terraingen.OreGenEvent;
 import net.minecraftforge.event.world.ChunkDataEvent;
 
 import org.apache.commons.lang3.ArrayUtils;
-
-import scala.actors.threadpool.Arrays;
 
 import com.aucguy.lateore.LateOreMod;
 import com.aucguy.lateore.util.ChunkData;

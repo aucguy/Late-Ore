@@ -60,10 +60,15 @@ public class LateOreMod {
 	@EventHandler
 	public void serverStarting(FMLServerAboutToStartEvent event) throws FileNotFoundException, IOException {
 		MinecraftServer server = event.getServer();
-		String mcDir = Minecraft.getMinecraft().mcDataDir.getAbsolutePath().replace("\\.", "");
+		String mcDir = Minecraft.getMinecraft().mcDataDir.getAbsolutePath().replace("\\.\\", "");
+		if(mcDir.endsWith("\\.")) {
+			mcDir = mcDir.substring(0, mcDir.length()-2);
+		}
 		File settings = new File(new File(new File(mcDir, "saves"), server.getFolderName()), "lateore.json");
 		// settings = new File(server.getDataDirectory() ,"") //TODO add for server
+		System.out.println("potiental lateore settings file: "+settings.getAbsolutePath());
 		if(settings.exists()) {
+			System.out.println("lateore settings were found");
 			GsonBuilder builder = new GsonBuilder();
 			builder.registerTypeAdapterFactory(new GeneratorAdapterFactory());
 			builder.registerTypeAdapter(Block.class, new BlockDeserializer());
